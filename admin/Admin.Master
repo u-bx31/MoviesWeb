@@ -1,0 +1,33 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="TP1_Movies.admin.Admin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="../styles/admin.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <header class="hedr">
+        <h3>login</h3>
+    </header>
+    <form id="form" runat="server">
+        <div class="main">
+            <div class="l_sideBar" id="sideBar" runat="server" visible="false">
+                <a href="/admin/movies/list.aspx" runat="server" id="linkMovi" class="btn">Admin</a></br>
+                <a href="/admin/users/list.aspx" runat="server" id="linkUser" class="btn">User</a></br>
+                <asp:Button ID="Log_btn" OnClick="Log_btn_Click" Text="Log-out" runat="server" CssClass="btn btn_Log" />
+            </div>
+            <div class="content">
+                <asp:ContentPlaceHolder ID="AdminContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </form>
+
+</body>
+</html>

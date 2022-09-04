@@ -1,0 +1,116 @@
+﻿.container {
+  width: 100%;
+  margin: 40px;
+  line-height: 1.7em; }
+
+.forms {
+  width: fit-content;
+  margin: 10px auto;
+  width: 30%; }
+
+.btn_log {
+  margin-top: 10px;
+  text-align: center; }
+
+.box {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: rgba(247, 34, 34, 0.8);
+  color: white;
+  border-radius: 3px;
+  text-align: center;
+  border: 1px solid black; }
+
+.hedr {
+  background-color: black;
+  height: 100px; }
+  .hedr h3 {
+    color: white;
+    text-align: center; }
+
+.main {
+  display: flex;
+  width: 100%; }
+
+.l_sideBar {
+  width: 15%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 50px 20px 20px 20px;
+  background-color: #E3DCD8; }
+  .l_sideBar .btn {
+    border: 1px solid black;
+    border-radius: 5px; }
+
+.content {
+  width: 100%;
+  flex: 2; }
+
+.main_info {
+  width: 100%;
+  padding: 30px;
+  line-height: 2em; }
+  .main_info .btn_add {
+    margin-bottom: 15px;
+    padding: 12px; }
+    .main_info .btn_add .add_bt {
+      appearance: none;
+      background-color: transparent;
+      border: 2px solid #1A1A1A;
+      border-radius: 15px;
+      box-sizing: border-box;
+      color: #3B3B3B;
+      cursor: pointer;
+      display: inline-block;
+      font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+      font-size: 16px;
+      font-weight: 600;
+      line-height: normal;
+      margin: 0;
+      min-height: 20px;
+      min-width: 0;
+      outline: none;
+      padding: 13px 21px;
+      text-align: center;
+      text-decoration: none;
+      transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      width: 100%;
+      will-change: transform; }
+    .main_info .btn_add .add_bt:disabled {
+      pointer-events: none; }
+    .main_info .btn_add .add_bt:hover {
+      color: #fff;
+      background-color: #1A1A1A;
+      box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+      transform: translateY(-2px); }
+    .main_info .btn_add .add_bt:active {
+      box-shadow: none;
+      transform: translateY(0); }
+  .main_info .gdv_data .gdv_item {
+    width: 100%;
+    text-align: center; }
+  .main_info .lbl_hedrs {
+    font-weight: bold;
+    font-size: 20px; }
+  .main_info .txt_inputs {
+    width: 45%;
+    margin-left: 10px; }
+  .main_info .button_ {
+    margin-top: 20px; }
+    .main_info .button_ .btn_ {
+      width: 30%; }
+  .main_info .v_summary {
+    border: 1px solid red;
+    background: rgba(250, 63, 63, 0.5);
+    color: white; }
+  .main_info .img_upload {
+    border: 1px solid black;
+    border-radius: 2px;
+    width: 30%; }
+
+.chek {
+  margin-left: 20px; }

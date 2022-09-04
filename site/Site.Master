@@ -1,0 +1,17 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="TP1_Movies.site.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>TP1 Movies</title>
+    <link href="../styles/styles.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form" runat="server">
+
+        <asp:ContentPlaceHolder ID="SiteContent" runat="server">
+        </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>
