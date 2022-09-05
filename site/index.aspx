@@ -2,7 +2,7 @@
 
 
 <asp:Content ID="indexContent" runat="server" ContentPlaceHolderID="SiteContent">
-    <header class="header">Movies List</header>
+    <header class="header"><asp:HyperLink Text="Weclome to MovieLand"  ForeColor="White"  runat="server" NavigateUrl="~/site/index.aspx"/></header>
     <div class="conatiner">
         <div class="filtr">
             <div class="item ">
@@ -75,7 +75,7 @@
                         <asp:Repeater runat="server" ID="rpt_mov" OnItemDataBound="rpt_mov_ItemDataBound">
                             <ItemTemplate>
                                 <div class="box">
-                                    <asp:HyperLink CssClass="link_m" runat="server" NavigateUrl='<%# "/site/details.aspx?id=" +Eval("ID")%>'>
+                                    <asp:HyperLink CssClass="link_m" runat="server" NavigateUrl='<%# "/site/details.aspx?id="+Eval("ID")%>'>
                                 <div class="picture">
                                     <img class="images" src="../images/<%# Eval("Image") %>" />
                                 </div>
