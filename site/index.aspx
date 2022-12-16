@@ -7,8 +7,7 @@
         <div class="filtr">
             <div class="item ">
                 <h3>KeyWord</h3>
-                <asp:TextBox CssClass="txtBx" ID="keyword" runat="server" />
-
+                <asp:TextBox CssClass="txtBx" ID="keyword" runat="server" ValidationGroup="v_1"  />
             </div>
             <div class="item ">
                 <h3>Year From</h3>
@@ -24,19 +23,19 @@
             </div>
             <div class="item ">
                 <h3>Rating From</h3>
-                <asp:TextBox CssClass="txtBx" ID="ratingFrom" runat="server" />
-                <asp:RangeValidator runat="server" Type="Double" ControlToValidate="ratingFrom" MaximumValue="10" MinimumValue="0" Display="Dynamic" ErrorMessage="Rating(0 - 10)" ForeColor="Red" />
+                <asp:TextBox CssClass="txtBx" ID="ratingFrom" runat="server" ValidationGroup="v_1" />
+                <asp:RangeValidator runat="server" Type="Double" ControlToValidate="ratingFrom" ValidationGroup="v_1" MaximumValue="10" MinimumValue="0" Display="Dynamic" ErrorMessage="Rating(0 - 10)" ForeColor="Red" />
             </div>
             <div class="item ">
                 <h3>Rating To</h3>
-                <asp:TextBox CssClass="txtBx" ID="ratingTO" runat="server" />
-                <asp:RangeValidator runat="server" Type="Double" ControlToValidate="ratingTO" SetFocusOnError="false" MaximumValue="10" MinimumValue="0" Display="Dynamic" ErrorMessage="Rating(0 - 10)" ForeColor="Red" />
+                <asp:TextBox CssClass="txtBx" ID="ratingTO" runat="server" ValidationGroup="v_1" />
+                <asp:RangeValidator runat="server" Type="Double" ControlToValidate="ratingTO" ValidationGroup="v_1" SetFocusOnError="false" MaximumValue="10" MinimumValue="0" Display="Dynamic" ErrorMessage="Rating(0 - 10)" ForeColor="Red" />
             </div>
             <div class="itemBtn ">
-                <asp:Button CssClass="btn Search" runat="server" Text="Search" OnClick="btnSearsh_Click" />
+                <asp:Button CssClass="btn Search" runat="server" Text="Search" ValidationGroup="v_1" OnClick="btnSearsh_Click" />
             </div>
             <div class="itemBtn">
-                <asp:Button CssClass="btn Clear" runat="server" Text="Clear" OnClick="btnClear_Click" />
+                <asp:Button CssClass="btn Clear" runat="server" Text="Clear" OnClick="btnClear_Click"/>
             </div>
 
         </div>
@@ -45,7 +44,7 @@
                 <div class="div_paging">
                     <div class="paging_rpt">
                         <asp:LinkButton ID="lnk_prev" runat="server" CssClass="lnk_pg" Text="Prev" OnClick="lnk_prev_Click" />
-                        <asp:Repeater ID="rpt_pg" runat="server" OnItemDataBound="rpt_pg_ItemDataBound">
+                        <asp:Repeater ID="rpt_pg" runat="server" OnItemDataBound="rpt_pg_ItemDataBound" >
                             <ItemTemplate>
                                 <asp:LinkButton runat="server" CssClass="lnk_pg" ID="link_paging" OnCommand="link_paging_Click" />
                             </ItemTemplate>
@@ -70,7 +69,7 @@
 
             <div class="movies-col">
                 <asp:ScriptManager ID="scrp_" runat="server" ></asp:ScriptManager>
-                <asp:UpdatePanel UpdateMode="Conditional" runat="server" ID="updt_" >
+                <asp:UpdatePanel UpdateMode="Conditional" runat="server" ID="updt_"  >
                     <ContentTemplate>
                         <asp:Repeater runat="server" ID="rpt_mov" OnItemDataBound="rpt_mov_ItemDataBound">
                             <ItemTemplate>
@@ -91,15 +90,12 @@
                     </ContentTemplate>
                     <Triggers>
                         <asp:AsyncPostBackTrigger ControlID="drpSort" />
-                        <asp:AsyncPostBackTrigger ControlID="rpt_pg" />
                     </Triggers>
                 </asp:UpdatePanel>
 
 
             </div>
         </div>
-
-
 
     </div>
 

@@ -12,7 +12,9 @@ namespace TP1_Movies.admin.movies
 {
     public partial class list : System.Web.UI.Page
     {
-        string strcon = @"Data Source=DESKTOP-7MHTBTK\SQLEXPRESS;Initial Catalog=Movies;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+
+        string strcon = @"Data Source=USER-31\SQLEXPRESS;Initial Catalog=Movies;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+
         DataTable dt = new DataTable();
         SqlDataAdapter sdt;
         SqlConnection cn;

@@ -14,7 +14,7 @@ namespace TP1_Movies
 {
     public partial class index : System.Web.UI.Page
     {
-        string strcon = @"Data Source=DESKTOP-7MHTBTK\SQLEXPRESS;Initial Catalog=Movies;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        string strcon = @"Data Source=USER-31\SQLEXPRESS;Initial Catalog=Movies;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
         DataTable dt = new DataTable();
         PagedDataSource pds = new PagedDataSource();
         protected void Page_Load(object sender, EventArgs e)
@@ -23,7 +23,6 @@ namespace TP1_Movies
             {
                 Load_data();
                 Load_year();
-
             }
             
         }
@@ -101,13 +100,13 @@ namespace TP1_Movies
             pds.CurrentPageIndex = PageNum;
             
 
-            
-
             ArrayList pages = new ArrayList();
             for (int i = 0; i <= pds.PageCount - 1; i++)
             {
                 pages.Add(i.ToString());
             }
+
+
 
             rpt_pg.DataSource = pages;
             rpt_pg.DataBind();
@@ -130,7 +129,7 @@ namespace TP1_Movies
 
         protected void btnSearsh_Click(object sender, EventArgs e)
         {
-            if (Page.IsValid)
+            if (IsValid)
             {
                 Load_data();
             }
@@ -144,7 +143,9 @@ namespace TP1_Movies
             drpYearTo.ClearSelection();
             ratingFrom.Text = "";
             ratingTO.Text = "";
-            
+
+            Load_data();
+
         }
 
         string colorClass = string.Empty;
@@ -152,15 +153,13 @@ namespace TP1_Movies
         {
             int pageItem = Convert.ToInt32(e.Item.DataItem);
             LinkButton link_paging = e.Item.FindControl("link_paging") as LinkButton;
-            link_paging.Text = (pageItem+1).ToString();
-            
-            if(PageNum == pageItem)
+            link_paging.Text = (pageItem + 1).ToString();
+            if (PageNum == pageItem)
             {
                 link_paging.Enabled = true;
                 link_paging.CssClass += " active";
             }
             link_paging.CommandArgument = pageItem.ToString();
-
 
         }
 
@@ -168,6 +167,7 @@ namespace TP1_Movies
         {
 
             ViewState["pageNum"] = Convert.ToInt32(e.CommandArgument);
+
             Load_data();
         }
 

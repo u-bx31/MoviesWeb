@@ -14,12 +14,14 @@
 <body>
     <header class="hedr">
         <h3>login</h3>
+        <h3><a href="../site/index.aspx" >Back To Movies</a></h3>
     </header>
     <form id="form" runat="server">
         <div class="main">
             <div class="l_sideBar" id="sideBar" runat="server" visible="false">
-                <a href="/admin/movies/list.aspx" runat="server" id="linkMovi" class="btn">Admin</a></br>
-                <a href="/admin/users/list.aspx" runat="server" id="linkUser" class="btn">User</a></br>
+                <a href="/admin/movies/list.aspx" runat="server" id="linkMovi" class="btn">Movies</a></br>
+                <a href="/admin/users/list.aspx" runat="server" id="linkUser" class="btn">Admins</a></br>
+                <a href="/site/index.aspx" runat="server" id="linkMovies" class="btn">Back To Movies</a></br>
                 <asp:Button ID="Log_btn" OnClick="Log_btn_Click" Text="Log-out" runat="server" CssClass="btn btn_Log" />
             </div>
             <div class="content">
